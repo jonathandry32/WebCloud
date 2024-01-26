@@ -19,7 +19,7 @@ function InsertCarburant() {
         e.preventDefault();
         const params = new URLSearchParams();
         params.append("nom", formData.nom);
-        await axios.post("http://localhost:8080/carburant", params, {
+        await axios.post("https://cloudwebservice-production-7ad7.up.railway.app/carburant", params, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

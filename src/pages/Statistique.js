@@ -11,7 +11,7 @@ function Statistique() {
     const [tableau, setTableau] = useState([]);
     
     const loadMarque = async () => {
-        const result = await axios.get("http://localhost:8080/venteannonce/marques", {
+        const result = await axios.get("https://cloudwebservice-production-7ad7.up.railway.app/venteannonce/marques", {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -19,7 +19,7 @@ function Statistique() {
         setTableau(result.data);
     }
     const loadBoite = async () => {
-        const result = await axios.get("http://localhost:8080/venteannonce/boites", {
+        const result = await axios.get("https://cloudwebservice-production-7ad7.up.railway.app/venteannonce/boites", {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -27,7 +27,7 @@ function Statistique() {
         setTableau(result.data);
     }
     const loadCarburant = async () => {
-        const result = await axios.get("http://localhost:8080/venteannonce/carburants", {
+        const result = await axios.get("https://cloudwebservice-production-7ad7.up.railway.app/venteannonce/carburants", {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -47,7 +47,7 @@ function Statistique() {
     }, [cat.idCategorie]);
 
     const loadFormData = async () => {
-        const result = await axios.get("http://localhost:8080/categories", {
+        const result = await axios.get("https://cloudwebservice-production-7ad7.up.railway.app/categories", {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -57,7 +57,7 @@ function Statistique() {
 
     const loadCategorie = async (selectedCategoryId) => {
         try {
-            const result = await axios.get(`http://localhost:8080/venteannonce/categories?idCategorie=${selectedCategoryId}`, {
+            const result = await axios.get(`https://cloudwebservice-production-7ad7.up.railway.app/venteannonce/categories?idCategorie=${selectedCategoryId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

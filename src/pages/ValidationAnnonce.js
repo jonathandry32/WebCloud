@@ -14,7 +14,7 @@ function ValidationAnnonce() {
   }, []);
 
   const loadCommission = async () => {
-    const result = await axios.get("http://localhost:8080/commissions/1", {
+    const result = await axios.get("https://cloudwebservice-production-7ad7.up.railway.app/commissions/1", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -23,7 +23,7 @@ function ValidationAnnonce() {
   };
 
   const loadAnnonceNonValide = async () => {
-    const result = await axios.get("http://localhost:8080/annonces/nonvalide", {
+    const result = await axios.get("https://cloudwebservice-production-7ad7.up.railway.app/annonces/nonvalide", {
       headers: {
         Authorization: `Bearer ${token}`,
       },
@@ -32,7 +32,7 @@ function ValidationAnnonce() {
   };
 
   const handleValidation = async (idAnnonce) => {
-    const url = `http://localhost:8080/annonces/validate?idAnnonce=${idAnnonce}&commission=${commissionValue.valeur}`;
+    const url = `https://cloudwebservice-production-7ad7.up.railway.app/annonces/validate?idAnnonce=${idAnnonce}&commission=${commissionValue.valeur}`;
     await axios.put(url, null, {
       headers: {
         Authorization: `Bearer ${token}`,

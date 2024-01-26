@@ -19,7 +19,7 @@ function InsertMarque() {
         e.preventDefault();
         const params = new URLSearchParams();
         params.append("nom", formData.nom);
-        await axios.post("http://localhost:8080/marque", params, {
+        await axios.post("https://cloudwebservice-production-7ad7.up.railway.app/marque", params, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

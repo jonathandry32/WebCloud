@@ -33,7 +33,7 @@ function LoginAdmin() {
           const params = new URLSearchParams();
           params.append("mail", formData.mail);
           params.append("password", formData.password);
-          const result = await axios.post("http://localhost:8080/auth/login", params);
+          const result = await axios.post("https://cloudwebservice-production-7ad7.up.railway.app/auth/login", params);
           localStorage.setItem('token', result.data.token);
           if(result.data.userId.nom=="Admin"){
             localStorage.setItem('admin', "True");

@@ -19,7 +19,7 @@ function InsertCategorie() {
         e.preventDefault();
         const params = new URLSearchParams();
         params.append("nom", formData.nom);
-        await axios.post("http://localhost:8080/categorie", params, {
+        await axios.post("https://cloudwebservice-production-7ad7.up.railway.app/categorie", params, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

@@ -21,7 +21,7 @@ function InsertModele() {
     },[]);
 
     const loadMarque =async ()=>{
-        const result=await axios.get("http://localhost:8080/marques", {
+        const result=await axios.get("https://cloudwebservice-production-7ad7.up.railway.app/marques", {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -32,7 +32,7 @@ function InsertModele() {
     const [categorie,setCategorie]=useState([]);
 
     const loadCategorie =async ()=>{
-        const result=await axios.get("http://localhost:8080/categories", {
+        const result=await axios.get("https://cloudwebservice-production-7ad7.up.railway.app/categories", {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -43,7 +43,7 @@ function InsertModele() {
     const [carburant,setCarburant]=useState([]);
 
     const loadCarburant =async ()=>{
-        const result=await axios.get("http://localhost:8080/carburants", {
+        const result=await axios.get("https://cloudwebservice-production-7ad7.up.railway.app/carburants", {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -88,7 +88,7 @@ function InsertModele() {
         params.append("nom", formData.nom);
         params.append("idCategories", formData.idCategories);
         params.append("idCarburants", formData.idCarburants);
-        await axios.post("http://localhost:8080/modeles", params, {
+        await axios.post("cloudwebservice-production-7ad7.up.railway.app/modeles", params, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

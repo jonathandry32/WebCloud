@@ -10,7 +10,7 @@ function Commission() {
         loadCaisse();
     },[]);
     const loadCommission =async ()=>{
-        const result=await axios.get("http://localhost:8080/commissions", {
+        const result=await axios.get("https://cloudwebservice-production-7ad7.up.railway.app/commissions", {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -18,7 +18,7 @@ function Commission() {
         setCommission(result.data);
     }
     const loadCaisse =async ()=>{
-        const result=await axios.get("http://localhost:8080/venteannonce/commission", {
+        const result=await axios.get("https://cloudwebservice-production-7ad7.up.railway.app/venteannonce/commission", {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -40,7 +40,7 @@ function Commission() {
         e.preventDefault();
     
         try {
-            await axios.put("http://localhost:8080/commissions/1", formData, {
+            await axios.put("https://cloudwebservice-production-7ad7.up.railway.app/commissions/1", formData, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
