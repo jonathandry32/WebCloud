@@ -88,7 +88,7 @@ function InsertModele() {
         params.append("nom", formData.nom);
         params.append("idCategories", formData.idCategories);
         params.append("idCarburants", formData.idCarburants);
-        await axios.post("cloudwebservice-production-7ad7.up.railway.app/modeles", params, {
+        await axios.post("https://cloudwebservice-production-7ad7.up.railway.app/modeles", params, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

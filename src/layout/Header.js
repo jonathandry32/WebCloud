@@ -39,12 +39,13 @@ export default function Header() {
                             <img src={logo} alt="Profil"
                                 className="rounded-circle"/>
                             <span className="d-none d-md-block dropdown-toggle ps-2">
+                                
                             </span>
                         </a>
 
                         <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                             <li className="dropdown-header">
-                                <span>Connection</span>
+                                <span>Profil</span>
                             </li>
                             <li>
                                 <hr className="dropdown-divider"/>
@@ -127,9 +128,17 @@ export default function Header() {
                     </li>
                 </>
                 ) : (
-                <li className="nav-item">
-                    <span className="nav-link">Veuillez vous connecter en tant qu'admin</span>
-                </li>
+                    <>
+                    <li className="nav-item">
+                        <span className="nav-link">Veuillez vous connecter en tant qu'admin</span>
+                        <a className="dropdown-item d-flex align-items-center" href="/loginAdmin">
+                            <i class="bi bi-box-arrow-in-left"></i>
+                            <span>Se connecter en tant qu'Admin</span>
+                        </a>
+                    </li>
+                    
+                    
+                    </>
                 )}
             </ul>
 
